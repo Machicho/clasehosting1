@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tecnología Educativa en Educación Superior</title>
+  <link rel="stylesheet" href="estilos.css">
+</head>
+<body>
+  <header>
+    <h1>Tecnología Educativa en Educación Superior</h1>
+    <nav>
+      <ul>
+        <li><a href="index.html">Inicio</a></li>
+        <li><a href="autor.html">Sobre el Autor</a></li>
+        <li><a href="sociedad-contemporanea.html">Sociedad Contemporánea</a></li>
+        <li><a href="sociedad-informacion.html">Sociedad de la Información</a></li>
+        <li><a href="sociedad-conocimiento.html">Sociedad del Conocimiento</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <section>
+      <h2>Bienvenidos</h2>
+      <p>Este sitio web explora el papel transformador de la Tecnología Educativa en la Educación Superior. Descubre cómo las herramientas digitales están revolucionando la enseñanza, el aprendizaje y la gestión del conocimiento en las universidades.</p>
+      <p>Desde el uso de plataformas virtuales hasta la inteligencia artificial en la educación, la tecnología abre nuevos horizontes para estudiantes y docentes.</p>
+    </section>
+  </main>
+
+  <footer>
+    <p id="fecha-hora"></p>
+  </footer>
+
+  <script>
+    function actualizarFechaHora() {
+      const ahora = new Date();
+      const opciones = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' };
+      const fecha = ahora.toLocaleDateString('es-EC', opciones);
+      const hora = ahora.toLocaleTimeString('es-EC');
+      document.getElementById("fecha-hora").innerHTML = `Fecha: ${fecha} | Hora: ${hora}`;
+    }
+    setInterval(actualizarFechaHora, 1000);
+    actualizarFechaHora();
+  </script>
+</body>
+</html>
